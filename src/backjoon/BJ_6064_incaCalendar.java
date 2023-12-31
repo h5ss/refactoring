@@ -51,7 +51,7 @@ public class BJ_6064_incaCalendar {
                     if (increaseY < lastN[i])
                         increaseY++;
                     else
-                        increaseY = 1;
+                        increaseY = 1; // M * n = 최대공약수 * 최소공배수
                     countYear++;
 
                     if (countYear > lastM[i] * lastN[i] / gcdReturn(lastM[i], lastN[i])) {
