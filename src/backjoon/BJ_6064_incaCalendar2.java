@@ -2,7 +2,7 @@ package backjoon;
 
 import java.util.Scanner;
 
-public class BJ_6064_InkaCalendar {
+public class BJ_6064_incaCalendar2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
