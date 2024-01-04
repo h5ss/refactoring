@@ -1,4 +1,4 @@
-package OOP.advanced.collection.List;
+package OOP.advanced.collection.boardPratice;
 
 public class Board {    // VO(Value Object) 값만 저장하는
     private String subject;

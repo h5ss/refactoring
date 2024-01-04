@@ -44,9 +44,9 @@ public class StudentDao {
         for (Student student : studentList) {
             total += student.getTotal();
         }
-        double averge = total / studentList.size();
+        double average = total / studentList.size();
         System.out.println(total);
-        System.out.printf("%.1f\n", averge);
+        System.out.printf("%.1f\n", average);
     }
 
     public void studentUpdate() {

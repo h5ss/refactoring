@@ -1,6 +1,5 @@
-package OOP.advanced.collection.List;
+package OOP.advanced.collection.boardPratice;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BoardMain {        //DAO

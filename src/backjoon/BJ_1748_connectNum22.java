@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BJ_1748_connectNum22 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String inputNum = sc.next();
+        String inputNum = sc.nextLine();
         int numLength = inputNum.length();
         int realNum = Integer.parseInt(inputNum);
         int count = 0;
