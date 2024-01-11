@@ -10,7 +10,7 @@ public class DotMain {
         dots[1] = new Dot(1,1);
         dots[2] = new Dot(2,2);
 
-        Agitrrays.sort(dots,new Comparator<Dot>(){
+        Arrays.sort(dots,new Comparator<Dot>(){
 
             @Override
             public int compare(Dot o1, Dot o2) {

@@ -15,7 +15,7 @@ public class BJ_9095_plus123 {
         testArray[3] = 4;
 
         for (int i = 4; i < 11; i++) {
-            testArray[i] = testArray[i-1] + testArray[i-2] + testArray[i-3];
+            testArray[i] = testArray[i - 1] + testArray[i - 2] + testArray[i - 3];
         }
 
         for (int i = 0; i < testTimes; i++) {
@@ -24,6 +24,5 @@ public class BJ_9095_plus123 {
         for (int i = 0; i < testTimes; i++) {
             System.out.println(testArray[printTest[i]]);
         }
-
     }
 }

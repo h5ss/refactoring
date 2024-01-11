@@ -11,9 +11,9 @@ public class BJ_1748_connectNum22 {
         int count = 0;
 
         for (int i = 1; i <= numLength; i++) {
-            count += (i-1) * (int)(Math.pow(10,i-1)-Math.pow(10,i-2));
+            count += (i - 1) * (int) (Math.pow(10, i - 1) - Math.pow(10, i - 2));
         }
-        count += numLength * (int)(realNum - (Math.pow(10,numLength-1)-1));
+        count += numLength * (int) (realNum - (Math.pow(10, numLength - 1) - 1));
 
         System.out.println(count);
     }

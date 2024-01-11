@@ -1,4 +1,4 @@
-package OOP.advanced.collection.app.student;
+package OOP.advanced.collection.app.student_2;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -14,18 +14,17 @@ public class StudentMain {
         student[4] = new Student("Cara", 20140001, 4.2);
 
         Arrays.sort(student);
-        Arrays.stream(student).forEach(number -> System.out.println(number.toString()));
-        System.out.println("----------------------------");
+        Arrays.stream(student).forEach(System.out::println);
+        System.out.println("--------");
 
         Arrays.sort(student, new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
-                if (o1.score == o2.score){
+                if (o1.score == o2.score)
                     return Integer.compare(o1.id, o2.id);
-                }else
-                    return Double.compare(o2.score,o1.score);
+                return Double.compare(o2.score, o1.score);
             }
         });
-        Arrays.stream(student).forEach(stu -> System.out.println(stu.toString()));
+        Arrays.stream(student).limit(2).forEach(System.out::println);
     }
 }
