@@ -38,8 +38,8 @@ public class StudentMappingEx {
         // 7. 영어점수의 총합과 평균을 구하여 출력하세요.
         int engTotal = engScoreList.stream().reduce(0, Integer::sum);
         double engAverage = engScoreList.stream().mapToInt(Integer::intValue).average().orElse(0.0);
-        System.out.println("국어 총합 : " + engTotal);
-        System.out.println("국어 평균 : " + engAverage);
+        System.out.println("영어 총합 : " + engTotal);
+        System.out.println("영어 평균 : " + engAverage);
         System.out.println("-----");
         // 8. 학생별 수학점수를 저장한 mathScoreList 만들고 출력하세요.
         List<Integer> mathScoreList = stuList.stream().map(Student::getMathScore).toList();
@@ -48,8 +48,8 @@ public class StudentMappingEx {
         // 9. 수학점수의 총합과 평균을 구하여 출력하세요.
         int mathTotal = mathScoreList.stream().reduce(0, Integer::sum);
         double mathAverage = mathScoreList.stream().mapToInt(Integer::intValue).average().orElse(0.0);
-        System.out.println("국어 총합 : " + mathTotal);
-        System.out.println("국어 평균 : " + mathAverage);
+        System.out.println("수학 총합 : " + mathTotal);
+        System.out.println("수학 평균 : " + mathAverage);
         System.out.println("-----");
         // 10. 학생별 총합 점수와 평균을 구하여 totalExam 에 저장하여 최종 성적표를 출력하세요.
 
@@ -60,6 +60,11 @@ public class StudentMappingEx {
                     n.getName(),n.getKorScore(),n.getEngScore(),n.getMathScore(),totalExam,totalExam/3.0);
             System.out.println();
         });
+        System.out.println("-----");
+
+
+
+
 
     }
 }

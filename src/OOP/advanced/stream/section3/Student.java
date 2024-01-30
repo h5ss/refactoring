@@ -1,6 +1,6 @@
 package OOP.advanced.stream.section3;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private String name;
     private Integer korScore;
     private Integer engScore;
@@ -28,5 +28,10 @@ public class Student {
 
     public Integer getMathScore() {
         return mathScore;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return Integer.compare(korScore, o.korScore);
     }
 }
