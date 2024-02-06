@@ -6,29 +6,7 @@ import java.util.List;
 
 public class Memo_main {
     public static void main(String[] args) {
-        try{
-            InputStream is = new FileInputStream("/Users/yunhosang/Desktop/memo.txt");
-            OutputStream os = new FileOutputStream("/Users/yunhosang/Desktop/memo.txt");
-
-            List<String> tmpAL = new ArrayList<>();
-
-            while (true){
-                int n = is.read();
-                tmpAL.add(String.valueOf(n));
-                if (n == -1) break;
-                os.write(n);
-            }
-            os.flush();
-            is.close();
-            os.close();
-
-
-        }catch (FileNotFoundException e){
-            System.out.println("파일을 찾을 수 없음");
-            e.printStackTrace();
-        }catch (IOException io){
-            io.printStackTrace();
-        }
-
+       Memo_menu mm = new Memo_menu();
+       mm.menu();
     }
 }
