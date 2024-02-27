@@ -1,4 +1,4 @@
-package Exception.ReceiptException;
+package upgrade.ReceiptException;
 
 public class ReceiptException extends RuntimeException{
     private ReceiptErrorCode errorCode;
