@@ -1,6 +1,6 @@
 package upgrade.Receipt;
 
-import lombok.Getter;
+import upgrade.DBconnector;
 import upgrade.UserVO;
 
 
@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReceiptDao {
+public class ReceiptDao extends DBconnector {
 
     // user 객체를 받아서 userType 으로 관리자(1)와 회원(2) 구분 -> (3)은 비회원 예정
     // 입고 요청 create ->
@@ -22,30 +22,7 @@ public class ReceiptDao {
 
     List<ReceiptVO> receiptDaoList = new ArrayList<>();
 
-
-    private void connectDB() {  // DB 연결
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ssglandersretail?serverTimezone=Asia/Seoul",
-                    "root",
-                    "1004");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void closeDB() {     // DB 연결 해제
-        try {
-            if (conn != null) {
-                conn.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void receiptRequestCreate(ReceiptVO build) {
+    public void createRequestReceipt(ReceiptVO build) {
         try {
             connectDB();
 
@@ -135,7 +112,7 @@ public class ReceiptDao {
         return receiptDaoList;
     }
 
-    public void receiptRequestUpdate(ReceiptVO build) {
+    public void updateRequestReceipt(ReceiptVO build) {
         try {
             connectDB();
             String sql = "UPDATE RECEIPT SET PID = ?, P_quantity = ?, WID = ?, UID = ?," +
@@ -163,7 +140,7 @@ public class ReceiptDao {
 
     }
 
-    public void receiptRequestCancel(ReceiptVO build) {
+    public void cancelRequestReceipt(ReceiptVO build) {
         try {
             connectDB();
             String sql = "UPDATE RECEIPT SET state = 0" +

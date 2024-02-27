@@ -19,6 +19,4 @@ public class ReceiptVO {
     private int pId;        // 상품 ID
     private int wId;        // 창고 선택 ID
 
-    ReceiptVO() {
-    }
 }
